@@ -53,15 +53,26 @@ function parseFrenchNumber(str) {
 async function fetchFromCasabourseMa() {
   const url = 'https://casabourse.ma/';
   try {
-    const html = await fetchText(url);
+    const res = await fetch(url, {
+      headers: { 'User-Agent': UA, 'Accept': 'text/html,application/xhtml+xml' },
+      signal: AbortSignal.timeout(20000),
+    });
+    const html = await res.text();
+
+    // Diagnostic systématique : toujours logué, même en cas de succès, pour
+    // savoir immédiatement si le contenu reçu diffère de ce qui est attendu.
+    const occurrences = (html.match(/casabourse\.ma\/entreprise\//gi) || []).length;
+    console.log(`   [diag] HTTP ${res.status} · ${html.length} caractères reçus · ${occurrences} occurrences de "entreprise/" trouvées`);
+    console.log(`   [diag] Premiers 400 caractères du <body> : ${(html.match(/<body[^>]*>([\s\S]{0,400})/i)?.[1] || html.slice(0,400)).replace(/\s+/g,' ')}`);
+
+    if (!res.ok) return { quotes: [], note: `casabourse.ma: HTTP ${res.status}` };
     if (!html || html.length < 5000) {
-      return { quotes: [], note: 'casabourse.ma: réponse trop courte' };
+      return { quotes: [], note: `casabourse.ma: réponse trop courte (${html.length} caractères)` };
     }
 
-    // Chaque valeur est un lien vers /entreprise/<slug>/ contenant le ticker,
-    // le prix en MAD et la variation. On isole le contenu de chaque lien,
-    // on retire les balises internes (logo <img>), puis on lit le texte.
-    const anchorRe = /<a\s+href="https:\/\/casabourse\.ma\/entreprise\/[a-z0-9-]+\/"[^>]*>([\s\S]*?)<\/a>/g;
+    // Regex volontairement tolérante : schéma optionnel, www optionnel,
+    // slash final optionnel, guillemets simples ou doubles.
+    const anchorRe = /<a\s+[^>]*href=["'][^"']*casabourse\.ma\/entreprise\/[a-z0-9-]+\/?["'][^>]*>([\s\S]*?)<\/a>/gi;
     const lineRe = /([A-Z0-9]{2,6})\s+([\d\s\u00A0]+(?:[.,]\d+)?)\s*MAD/;
 
     const quotes = [];
@@ -78,7 +89,7 @@ async function fetchFromCasabourseMa() {
       quotes.push({ ticker, price });
     }
 
-    return { quotes, note: `casabourse.ma: ${quotes.length} valeurs extraites` };
+    return { quotes, note: `casabourse.ma: ${quotes.length} valeurs extraites (sur ${occurrences} liens entreprise/ détectés)` };
   } catch (e) {
     return { quotes: [], note: `casabourse.ma: échec fetch — ${e.message}` };
   }
