@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T19:22:50.814Z",
+  "generated_at": "2026-09-17T19:33:40.177Z",
   "source_used": "TradingView (auto)",
   "source_log": [
     "Aucune saisie manuelle fournie",
@@ -168,7 +168,7 @@
     },
     {
       "ticker": "INV",
-      "price": 130
+      "price": 125
     },
     {
       "ticker": "JET",
@@ -188,7 +188,7 @@
     },
     {
       "ticker": "M2M",
-      "price": 403.6
+      "price": 416
     },
     {
       "ticker": "MAB",
@@ -252,11 +252,11 @@
     },
     {
       "ticker": "S2M",
-      "price": 510
+      "price": 524.9
     },
     {
       "ticker": "SAH",
-      "price": 3150
+      "price": 2875
     },
     {
       "ticker": "SAM",
@@ -264,15 +264,15 @@
     },
     {
       "ticker": "SBM",
-      "price": 2107
+      "price": 2060
     },
     {
       "ticker": "SID",
-      "price": 1840
+      "price": 1836
     },
     {
       "ticker": "SLF",
-      "price": 430
+      "price": 439
     },
     {
       "ticker": "SMI",
