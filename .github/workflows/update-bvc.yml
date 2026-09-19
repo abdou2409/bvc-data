@@ -7,7 +7,18 @@ on:
     # Dans les deux cas, c'est APRÈS la clôture de la Bourse de Casablanca
     # (15h30 heure locale). Lun-Ven uniquement (jours de bourse).
     - cron: '0 16 * * 1-5'
-  workflow_dispatch: {}   # permet de déclencher manuellement depuis l'onglet Actions
+  workflow_dispatch:
+    inputs:
+      manual_data:
+        description: >
+          OPTIONNEL — colle ici les cours du jour, un titre par ligne,
+          format "TICKER PRIX" (ex : ATW 705.5). Si tu remplis ce champ,
+          il est utilisé À LA PLACE du scraping automatique — 100% fiable
+          car ça ne dépend d'aucun site externe. Laisse vide pour laisser
+          le robot essayer de scraper automatiquement (TradingView puis
+          casabourse.ma).
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -25,12 +36,14 @@ jobs:
           node-version: '20'
 
       - name: Exécuter le scraper
+        env:
+          MANUAL_DATA: ${{ github.event.inputs.manual_data }}
         run: node scripts/scraper.js
 
-      - name: Commit et push si data/bvc-data.json a changé
+      - name: Commit et push si les données ont changé
         run: |
           git config user.name "bvc-bot"
           git config user.email "bvc-bot@users.noreply.github.com"
-          git add data/bvc-data.json
+          git add data/bvc-data.json data/history.json
           git diff --staged --quiet || git commit -m "Mise à jour cours BVC $(date -u +%Y-%m-%d)"
           git push
