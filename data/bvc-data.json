@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T19:49:52.808Z",
+  "generated_at": "2026-10-21T19:55:23.598Z",
   "source_used": "TradingView (auto)",
   "source_log": [
     "Aucune saisie manuelle fournie",
@@ -8,15 +8,15 @@
   "quotes": [
     {
       "ticker": "ADH",
-      "price": 35.36
+      "price": 36.2
     },
     {
       "ticker": "ADI",
-      "price": 356
+      "price": 366
     },
     {
       "ticker": "AFI",
-      "price": 325.1
+      "price": 327
     },
     {
       "ticker": "AFM",
@@ -36,11 +36,11 @@
     },
     {
       "ticker": "ARD",
-      "price": 425.1
+      "price": 425.2
     },
     {
       "ticker": "ATH",
-      "price": 59.3
+      "price": 59.5
     },
     {
       "ticker": "ATL",
@@ -48,7 +48,7 @@
     },
     {
       "ticker": "ATW",
-      "price": 672
+      "price": 676.1
     },
     {
       "ticker": "BAL",
@@ -56,63 +56,63 @@
     },
     {
       "ticker": "BCI",
-      "price": 550.1
+      "price": 550
     },
     {
       "ticker": "BCP",
-      "price": 245
+      "price": 247.1
     },
     {
       "ticker": "BOA",
-      "price": 178
+      "price": 180
     },
     {
       "ticker": "CAP",
-      "price": 206
+      "price": 206.55
     },
     {
       "ticker": "CDM",
-      "price": 916
+      "price": 928
     },
     {
       "ticker": "CFG",
-      "price": 191
+      "price": 192
     },
     {
       "ticker": "CIH",
-      "price": 298
+      "price": 300
     },
     {
       "ticker": "CMA",
-      "price": 1401
+      "price": 1391
     },
     {
       "ticker": "CMG",
-      "price": 260
+      "price": 258
     },
     {
       "ticker": "CMT",
-      "price": 4030
+      "price": 4100
     },
     {
       "ticker": "COL",
-      "price": 77
+      "price": 77.01
     },
     {
       "ticker": "CRS",
-      "price": 19.38
+      "price": 18.8
     },
     {
       "ticker": "CSR",
-      "price": 171
+      "price": 178
     },
     {
       "ticker": "CTM",
-      "price": 805
+      "price": 799.9
     },
     {
       "ticker": "DHO",
-      "price": 48.05
+      "price": 47
     },
     {
       "ticker": "DIS",
@@ -128,11 +128,11 @@
     },
     {
       "ticker": "DWY",
-      "price": 754
+      "price": 753
     },
     {
       "ticker": "DYT",
-      "price": 340
+      "price": 339
     },
     {
       "ticker": "EQD",
@@ -140,11 +140,11 @@
     },
     {
       "ticker": "FBR",
-      "price": 331
+      "price": 329.9
     },
     {
       "ticker": "GAZ",
-      "price": 3640
+      "price": 3609
     },
     {
       "ticker": "GTM",
@@ -152,39 +152,39 @@
     },
     {
       "ticker": "HPS",
-      "price": 520
+      "price": 525.1
     },
     {
       "ticker": "IAM",
-      "price": 88
+      "price": 88.4
     },
     {
       "ticker": "IBC",
-      "price": 52
+      "price": 50.49
     },
     {
       "ticker": "IMO",
-      "price": 91.3
+      "price": 91.25
     },
     {
       "ticker": "INV",
-      "price": 117.9
+      "price": 112.35
     },
     {
       "ticker": "JET",
-      "price": 1400
+      "price": 1430
     },
     {
       "ticker": "LBV",
-      "price": 3800
+      "price": 3900
     },
     {
       "ticker": "LES",
-      "price": 282
+      "price": 275
     },
     {
       "ticker": "LHM",
-      "price": 1605
+      "price": 1610
     },
     {
       "ticker": "M2M",
@@ -192,15 +192,15 @@
     },
     {
       "ticker": "MAB",
-      "price": 899
+      "price": 898
     },
     {
       "ticker": "MDP",
-      "price": 22.8
+      "price": 22.1
     },
     {
       "ticker": "MIC",
-      "price": 737.2
+      "price": 736
     },
     {
       "ticker": "MLE",
@@ -208,19 +208,19 @@
     },
     {
       "ticker": "MNG",
-      "price": 1519
+      "price": 1516
     },
     {
       "ticker": "MOX",
-      "price": 384
+      "price": 348
     },
     {
       "ticker": "MSA",
-      "price": 760
+      "price": 766.1
     },
     {
       "ticker": "MUT",
-      "price": 224
+      "price": 220
     },
     {
       "ticker": "NEJ",
@@ -228,7 +228,7 @@
     },
     {
       "ticker": "NKL",
-      "price": 46.8
+      "price": 47.5
     },
     {
       "ticker": "OUL",
@@ -240,19 +240,19 @@
     },
     {
       "ticker": "RDS",
-      "price": 164.8
+      "price": 170
     },
     {
       "ticker": "REB",
-      "price": 90.05
+      "price": 90
     },
     {
       "ticker": "RIS",
-      "price": 294
+      "price": 290.5
     },
     {
       "ticker": "S2M",
-      "price": 465
+      "price": 456
     },
     {
       "ticker": "SAH",
@@ -268,7 +268,7 @@
     },
     {
       "ticker": "SID",
-      "price": 1630
+      "price": 1620
     },
     {
       "ticker": "SLF",
@@ -276,19 +276,19 @@
     },
     {
       "ticker": "SMI",
-      "price": 5752
+      "price": 5790
     },
     {
       "ticker": "SNA",
-      "price": 45.9
+      "price": 47
     },
     {
       "ticker": "SNP",
-      "price": 284
+      "price": 273
     },
     {
       "ticker": "SOT",
-      "price": 314.8
+      "price": 309
     },
     {
       "ticker": "SRM",
@@ -296,23 +296,23 @@
     },
     {
       "ticker": "STR",
-      "price": 152
+      "price": 151
     },
     {
       "ticker": "T2S",
-      "price": 211.8
+      "price": 214.6
     },
     {
       "ticker": "TGC",
-      "price": 614
+      "price": 614.9
     },
     {
       "ticker": "TMA",
-      "price": 1321
+      "price": 1316
     },
     {
       "ticker": "TQM",
-      "price": 1628
+      "price": 1630
     },
     {
       "ticker": "UMR",
@@ -320,15 +320,15 @@
     },
     {
       "ticker": "VCN",
-      "price": 294
+      "price": 298.4
     },
     {
       "ticker": "WAA",
-      "price": 5189
+      "price": 5035
     },
     {
       "ticker": "ZDJ",
-      "price": 233
+      "price": 230
     }
   ]
 }
